@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<main>
+    <!-- Hero Section -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to E-Book Pvt. Ltd.</h1>
+            <p class="lead">Your one-stop shop for high-quality used books in Sri Lanka!</p>
+            <a href="#services" class="btn btn-lg btn-light mt-3">
+                <i class="fas fa-book"></i> Explore Our Collection
+            </a>
+        </div>
+    </section>
+
+     @*Book Search Section*@ 
+    <!--<section id="book-search" class="py-5">
+        <div class="container text-center">
+            <h2 class="text-primary fw-bold mb-4">Search for Books</h2>
+            <form method="get" action="@Url.Action("Index", "Home")" class="d-flex justify-content-center">
+                <input type="text" name="searchTerm" class="form-control w-100" placeholder="Search for books by title, author, or genre..." value="@Request.QueryString["searchTerm"]" />
+                <button type="submit" class="btn btn-primary  ms-3 ">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </section>-->
+
+      </form>
+        </div>
+    </section>
+
+
+    <!-- About Us Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="text-primary fw-bold">About Us</h2>
+            <p class="text-muted">
+                Over the last three years, E-Book Pvt. Ltd. has become Sri Lanka's leading network of bookshops.
+                With a vast collection of Sri Lankan and foreign used books, we cater to everyone
+                from little kids to higher academics.
+            </p>
+            <a href="" class="btn btn-primary">
+                Learn More About Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center text-primary fw-bold mb-4">Our Services</h2>
+            <div class="row text-center">
+                <!-- Service 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-user-plus fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Customer Registration</h5>
+                            <p class="card-text">
+                                New customers can register to order books, manage orders, and provide feedback.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Search for Books</h5>
+                            <p class="card-text">
+                                Explore our vast collection of Sri Lankan and foreign books with ease.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-user-shield fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title">Admin Management</h5>
+                            <p class="card-text">
+                                Admins can manage books, customers, and orders and generate detailed reports.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="bg-secondary text-white py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold">Start Your Journey with Us Today!</h2>
+            <p class="lead">
+                Whether you’re a book lover or a student, we have something for everyone.
+            </p>
+            <a href="/Auth/Register" class="btn btn-light btn-lg mt-3">
+                <i class="fas fa-user"></i> Register Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            &copy; @DateTime.Now.Year E-Book Pvt. Ltd. | All Rights Reserved.
+        </p>
+    </footer>
+</main>

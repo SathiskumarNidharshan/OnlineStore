@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "About Us";
+    ViewBag.Message = "Discover More About E-Book Pvt. Ltd.";
+}
+
+<main class="container my-5">
+    <section class="text-center mb-5">
+        <h1 class="display-4 text-primary" id="title">@ViewBag.Title</h1>
+        <p class="lead text-muted">@ViewBag.Message</p>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="~/Assets/img/book.jpeg" alt="E-Book Shop"
+                     class="img-fluid rounded shadow"
+                     style="width: 400px; height: 300px; object-fit: cover;">
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-success">Who We Are</h2>
+                <p>
+                    E-Book Pvt. Ltd. is a leading used book selling company in Sri Lanka. Over the last three years,
+                    we have emerged as a prestigious and foremost network of bookshops across the country.
+                    Our rapid development and expansion have been remarkable both in quality and quantity.
+                </p>
+                <p>
+                    We offer a vast collection of Sri Lankan and foreign used books covering multiple disciplines to
+                    meet the diverse needs of our wide readership, ranging from little kids to higher academics.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-light p-5 rounded shadow">
+        <h2 class="text-center text-primary mb-4">Our Vision for the Future</h2>
+        <p class="text-center">
+            To make quality books accessible and affordable to everyone, while providing a seamless online
+            experience through our innovative web application.
+        </p>
+    </section>
+
+    <!-- Customer Features -->
+    <section class="my-5">
+        <h3 class="text-success mb-3">Customer Features</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <i class="fas fa-user-plus text-primary"></i> New customers can register to enjoy exclusive benefits.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-shopping-cart text-primary"></i> Logged-in customers can order books effortlessly.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-tasks text-primary"></i> Manage orders, including viewing and deleting, with ease.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-search text-primary"></i> Search for book details anytime, anywhere.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-comment-alt text-primary"></i> Provide valuable feedback to help us grow.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Admin Features -->
+    <section class="my-5">
+        <h3 class="text-danger mb-3">Admin Features</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <i class="fas fa-user-shield text-danger"></i> Secure admin login and registration.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-book text-danger"></i> Efficiently manage book details.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-users-cog text-danger"></i> Oversee customer and order management.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-chart-line text-danger"></i> Generate insightful business reports.
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-tachometer-alt text-danger"></i> Access an intuitive admin dashboard.
+            </li>
+        </ul>
+    </section>
+
+
+</main>

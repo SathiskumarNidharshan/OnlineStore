@@ -1,0 +1,78 @@
+﻿@model OnlineStore.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+@using (Html.BeginForm("Register", "Auth", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-validate", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container d-flex justify-content-center align-items-center vh-200">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Create a New Account</h4>
+                </div>
+                <div class="card-body">
+                    @* Display error messages if any *@
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.ErrorMessage
+                        </div>
+                    }
+
+                    <div class="form-group mb-3">
+                        @Html.LabelFor(i => i.Username, "Username", new { @class = "form-label" })
+                        @Html.TextBoxFor(i => i.Username, new { @class = "form-control", required = "required", placeholder = "Enter Username" })
+                    </div>
+
+                    <div class="form-group mb-3">
+                        @Html.LabelFor(i => i.Password, "Password", new { @class = "form-label" })
+                        @Html.PasswordFor(i => i.Password, new { @class = "form-control", required = "required", placeholder = "Enter Password" })
+                    </div>
+
+                    <div class="form-group mb-3">
+                        @Html.LabelFor(i => i.ConfirmPassword, "Confirm Password", new { @class = "form-label" })
+                        @Html.PasswordFor(i => i.ConfirmPassword, new { @class = "form-control", required = "required", placeholder = "Confirm Password" })
+                    </div>
+
+                    <div class="form-group mb-3">
+                        @Html.LabelFor(i => i.FirstName, "First Name", new { @class = "form-label" })
+                        @Html.TextBoxFor(i => i.FirstName, new { @class = "form-control", required = "required", placeholder = "Enter First Name" })
+                    </div>
+
+                    <div class="form-group mb-3">
+                        @Html.LabelFor(i => i.LastName, "Last Name", new { @class = "form-label" })
+                        @Html.TextBoxFor(i => i.LastName, new { @class = "form-control", required = "required", placeholder = "Enter Last Name" })
+                    </div>
+
+                    <div class="form-group mb-3">
+                        @Html.Label("Role", "Select Role", new { @class = "form-label" })
+                        @Html.DropDownListFor(
+                            i => i.Role,
+                            new SelectList(new[] {
+                                new { Value = "Admin", Text = "Admin" },
+                                new { Value = "Customer", Text = "Customer" }
+                            }, "Value", "Text"),
+                            "Select Role",
+                            new { @class = "form-control", required = "required" }
+                        )
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button id="registerBtn" type="submit" class="btn btn-primary btn-lg">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <p>
+                        Already have an account?
+                        @Html.ActionLink("Login Here", "Login", "Auth", null, new { @class = "text-primary fw-bold" })
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
